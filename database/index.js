@@ -1,22 +1,12 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/imagesInfo');
+var mysql = require('mysql');
 
-var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('db connected');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'test123',
+  database : 'restaurants'
 });
 
-let imagesSchema = mongoose.Schema({
-  // TODO: your schema here!
-  imageId: Number,
-  imageURL: String,
-  imageTitle: String,
-  imageCategory: String,
-  imageDescription: String,
-  imageUploadDate: Date,
-  imageModiefiedDate: Date
-});
+connection.connect(() => console.log('connected to the database!'));
 
-let Image = mongoose.model('Image', imagesSchema);
+module.exports = connection;
