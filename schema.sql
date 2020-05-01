@@ -45,15 +45,15 @@ INSERT INTO restaurants_info(restaurantName) VALUES ("Chinese Cuisine");
 
 
 INSERT INTO users_info(userName, userReviews, userType, userIconImage) 
-    VALUES ("priya", "this is an awesome place", "regular", "/Users/priyankakoneru/HR/yelp_images/images/icons/user1.jpg");
+    VALUES ("priya", "this is an awesome place", "regular", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/icons/user1.jpg");
 INSERT INTO users_info(userName, userReviews, userType, userIconImage) 
-    VALUES ("koneru", "this is an amazing place", "elite", "/Users/priyankakoneru/HR/yelp_images/images/icons/user2.jpg");
+    VALUES ("koneru", "this is an amazing place", "elite", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/icons/user2.jpg");
 INSERT INTO users_info(userName, userReviews, userType, userIconImage) 
-    VALUES ("hello", "this is a good place", "elite", "/Users/priyankakoneru/HR/yelp_images/images/icons/user3.jpg");
+    VALUES ("hello", "this is a good place", "elite", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/icons/user3.jpg");
 
 INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage", "/Users/priyankakoneru/HR/yelp_images/images/food1.jpg", "food", "yummy dish", CURDATE(), 1, 2);
+      VALUES ("testImage", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food1.jpg", "food", "yummy dish", CURDATE(), 1, 2);
 INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage1", "/Users/priyankakoneru/HR/yelp_images/images/food2.jpg", "decor", "nice environment", CURDATE(), 1, 2);
+      VALUES ("testImage1", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food2.jpg", "decor", "nice environment", CURDATE(), 1, 2);
 INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage2", "/Users/priyankakoneru/HR/yelp_images/images/food3.jpg", "food", "super good", CURDATE(), 1, 2);
+      VALUES ("testImage2", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food3.jpg", "food", "super good", CURDATE(), 1, 2);
