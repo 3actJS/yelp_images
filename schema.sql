@@ -23,7 +23,7 @@
  CREATE TABLE images_info(
    imageId int AUTO_INCREMENT NOT NULL PRIMARY KEY,
    imageTitle VARCHAR(50),
-   itemImage VARCHAR(255),
+   itemImageUrl VARCHAR(255),
    imageCategory VARCHAR(100),
    imageDescription VARCHAR(255),
    imageUploadDate DATE,
