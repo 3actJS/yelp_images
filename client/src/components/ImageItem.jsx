@@ -23,6 +23,7 @@ class ImageItem extends React.Component {
         return(
             <div>
                 <div className="imageContainer" style={imageContainerStyle}>
+                    <div>{imageId}</div>
                     <div>{imageTitle}</div>
                     <div>
                         <img src={itemImage} alt="food image" height="100" width="100"/>
