@@ -3,7 +3,7 @@ module.exports = {
     clearMocks: true,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: ['src/**/*.{js,jsx,mjs}'],
+    collectCoverageFrom: ['src/**/*.{js,jsx}'],
 
     // The directory where Jest should output its coverage files
     coverageDirectory: 'coverage',
@@ -23,7 +23,7 @@ module.exports = {
     },
 
     // The glob patterns Jest uses to detect test files
-    testMatch: ['**/__tests__/**/*.(js|jsx)', '**/?(*.)+(spec|test).js?(x)'],
+    testMatch: ['**/__tests__/**/*.(js|jsx)'],
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     //testPathIgnorePatterns: ['\\\\node_modules\\\\'],

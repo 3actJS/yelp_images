@@ -9,6 +9,5 @@ describe('App test suite', () => {
     it('should render the App component on screen', () => {
         const wrapper = shallow(<App />);
         expect(wrapper).toExist();    
-        //expect(wrapper.find(ImageItem).to.have.lengthOf(3));
     })
 })
