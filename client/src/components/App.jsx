@@ -1,10 +1,19 @@
-import React from 'react';
+import React from 'react'
+import ImageContainer from './ImageContainer.jsx'
+import images from '../sampleResponse.js'
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            images: images
+        }
+    }
+
     render() {
         return(
             <div>
-                <h1>This is a test</h1>
+                <ImageContainer images={this.state.images}/>
             </div>
         );       
     }
