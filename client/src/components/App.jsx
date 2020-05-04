@@ -1,7 +1,8 @@
-import React from 'react'
-import ImageContainer from './ImageContainer.jsx'
-import images from '../sampleResponse.js'
-import axios from 'axios'
+import React from 'react';
+import ImageContainer from './ImageContainer.jsx';
+import images from '../sampleResponse.js';
+import styled from 'styled-components';
+import axios from 'axios';
 
 class App extends React.Component {
     constructor(props) {
