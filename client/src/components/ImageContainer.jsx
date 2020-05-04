@@ -9,7 +9,7 @@ class ImageContainer extends React.Component {
         const { images } = this.props;
         return(
             <div>
-                {images.map((image) =>
+                {images && images.map((image) =>
                     <ImageItem image={image}/>
                 )}
             </div>
