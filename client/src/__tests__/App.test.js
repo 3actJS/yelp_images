@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // importing actual component
-import App from '../client/src/components/App';
+import App from '../components/App';
 
 describe('App test suite', () => {
     it('should render the App component on screen', () => {

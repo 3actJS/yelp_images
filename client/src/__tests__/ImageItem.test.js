@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // importing actual component
-import ImageItem from '../client/src/components/ImageItem';
+import ImageItem from '../components/ImageItem';
 
 describe('ImageItem test suite', () => {
     it('should render the ImageItem component on screen', () => {
@@ -16,7 +16,7 @@ describe('ImageItem test suite', () => {
             "imageUploadDate": "2020-05-01T07:00:00.000Z",
             "userId": 1,
             "restaurantId": 2
-        }
+        };
         const wrapper = shallow(<ImageItem image={props}/>);
         expect(wrapper).toExist();          
     });

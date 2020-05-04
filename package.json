@@ -37,6 +37,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.9.0",
+    "eslint-plugin-jest-dom": "^2.1.0",
     "jest": "^25.5.4",
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
