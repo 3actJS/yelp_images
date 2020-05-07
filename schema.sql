@@ -51,9 +51,27 @@ INSERT INTO users_info(userName, userReviews, userType, userIconImage)
 INSERT INTO users_info(userName, userReviews, userType, userIconImage) 
     VALUES ("hello", "this is a good place", "elite", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/icons/user3.jpg");
 
-INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food1.jpg", "food", "yummy dish", CURDATE(), 1, 2);
-INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage1", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food2.jpg", "decor", "nice environment", CURDATE(), 1, 2);
-INSERT INTO images_info(imageTitle, itemImage, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
-      VALUES ("testImage2", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food3.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage1", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food1.jpg", "food", "yummy dish", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage2", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food2.jpg", "decor", "nice environment", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage3", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food3.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage4", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food4.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage5", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food5.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage6", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food6.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage7", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food7.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage8", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food8.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage9", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food9.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage10", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food10.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage11", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food11.jpg", "food", "super good", CURDATE(), 1, 2);
+INSERT INTO images_info(imageTitle, itemImageUrl, imageCategory, imageDescription, imageUploadDate, userId, restaurantId) 
+      VALUES ("testImage12", "https://fec-yelp-images.s3-us-west-1.amazonaws.com/food12.jpg", "food", "super good", CURDATE(), 1, 2);
