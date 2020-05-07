@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import sampleResponse from '../sampleResponse.js';
+import sampleResponse from '../../../sampleResponse';
 
 // importing actual component
 import ImageContainer from '../components/ImageContainer.jsx';
