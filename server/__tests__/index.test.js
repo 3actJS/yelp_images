@@ -11,7 +11,7 @@ describe("GET /images ", () => {
         database.end();
         done();
     });
-    it("It should respond with a status code of 200 statuscode", async (done) => {
+    it("It should respond with a status code of 200 on success", async (done) => {
       const response = await request.get(`/images/`);
 
       expect(response.statusCode).toEqual(200);
