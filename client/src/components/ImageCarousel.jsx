@@ -12,7 +12,7 @@ const ImageContainer = styled.div`
     user-select: none;
     img {
         width: 541px;
-        height: 593px;
+        height: 600px;
         vertical-align: middle;
         display: inline-block;
     }
