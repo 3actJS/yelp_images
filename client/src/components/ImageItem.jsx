@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import ModalContainer from './ModalContainer.jsx';
 
 const Div = styled.div`
   border-right: 2px solid white;
@@ -11,12 +12,24 @@ const Div = styled.div`
   }
 `;
 
-const ImageItem = ({image}) => (
-    <Div>
+const ImageItem = ({image}) => {
+  const ref = useRef(null);
+
+  const openModal = () => {
+    //console.log('Click on each image');
+    ref.current.showModal();
+  };
+
+  return (
+    <>
+    <Div onClick={openModal}>
         <span>       
             <img src={image.itemImageUrl} alt="food image"/>           
         </span>
     </Div>
-)
+    <ModalContainer ref={ref}/>
+    </>
+  );
+}
 
 export default ImageItem
