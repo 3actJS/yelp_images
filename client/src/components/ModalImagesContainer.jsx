@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
     font-weight: 700;
     padding: 16px;
     h4 {
-        margin-bottom: 10px;
+        margin-bottom: 0;
         margin-top: 0;
     };
     a {
@@ -57,8 +57,8 @@ const ModalImagesContainer = (props) => {
         <ImageContainer>
             <HeaderContainer>
                 <div>
-                    <h4>Photos of Restaurant Name</h4>
-                    <a>See all number photos</a>
+                    <h4>Photos of Voodoo Love</h4>
+                    <a>See all 12 photos</a>
                 </div>
             </HeaderContainer>
             <PhotosContainer>

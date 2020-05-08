@@ -11,19 +11,25 @@ const UserInfoContainer = styled.div`
     border-radius: 0 0 4px 4px;
     background: #333;
     background: rgba(0,0,0,.5);
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5em;
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
 `;
 
-const UserInfo = () => {
+const UserInfo = (props) => {
     return(
         <UserInfoContainer>
-            User Info Panel
+            <div className="userInfo">
+                <span>{props.userInfo[0].userName.charAt(0).toUpperCase()+props.userInfo[0].userName.slice(1)}</span>
+            </div>
+            <div className="moreInfo">
+                
+            </div>
         </UserInfoContainer>
     );
 }

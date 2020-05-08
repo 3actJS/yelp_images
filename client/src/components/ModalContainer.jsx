@@ -111,7 +111,7 @@ const ModalContainer = forwardRef((props, ref) => {
                     <PlaceHolderContainer>
                         <div className="carouselComponent">
                             <ImageCarousel images={props.allImages} selectedImage={props.clickedImage}/>
-                            <UserInfo />   
+                            <UserInfo userInfo={props.allUsers}/>   
                         </div>
                         <div className="imagesComponent">
                             <ModalImagesContainer images={props.allImages}/>

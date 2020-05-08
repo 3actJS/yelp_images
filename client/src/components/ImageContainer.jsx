@@ -33,7 +33,7 @@ const NextSpan = styled.span`
  }
 `;
 
-const ImageContainer = ({images}) => {
+const ImageContainer = ({images, users}) => {
   const [currentImages, setCurrentImages] = useState();
   const [startCount, setStartCount] = useState(0);
   const numOfImages = 4;
@@ -60,7 +60,7 @@ const ImageContainer = ({images}) => {
             </svg>
         </BackSpan>
         {currentImages && currentImages.map((image, index) =>
-            <ImageItem key={index} image={image} images={images}/>
+            <ImageItem key={index} image={image} images={images} users={users}/>
         )}
         <NextSpan onClick={goRight}>
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">

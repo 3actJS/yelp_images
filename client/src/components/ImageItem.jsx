@@ -12,7 +12,7 @@ const Div = styled.div`
   }
 `;
 
-const ImageItem = ({images, image}) => {
+const ImageItem = ({images, image, users}) => {
   const ref = useRef(null);
 
   const openModal = () => {
@@ -27,7 +27,7 @@ const ImageItem = ({images, image}) => {
             <img src={image.itemImageUrl} alt="food image"/>           
         </span>
     </Div>
-    <ModalContainer clickedImage={image} allImages={images} ref={ref} />
+    <ModalContainer clickedImage={image} allImages={images} allUsers={users} ref={ref} />
     </>
   );
 }
