@@ -7,7 +7,6 @@ import ImageContainer from '../components/ImageContainer.jsx';
 
 describe('ImageContainer test suite', () => {
   it('should render the ImageContainer component on screen', () => {
-      //console.log(sampleResponse);
       const wrapper = shallow(<ImageContainer images={sampleResponse}/>);
       expect(wrapper).toExist();          
   })
