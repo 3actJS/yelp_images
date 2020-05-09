@@ -34,7 +34,7 @@ const NextSpan = styled.span`
 `;
 
 const ImageContainer = ({images, users}) => {
-  const [currentImages, setCurrentImages] = useState();
+  const [currentImages, setCurrentImages] = useState(images);
   const [startCount, setStartCount] = useState(0);
   const numOfImages = 4;
 
