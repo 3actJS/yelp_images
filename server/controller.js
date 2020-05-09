@@ -5,4 +5,7 @@ module.exports = {
     // res.send('GET Images route working');
     model.findAllImages(res);
   },
+  getUsers: (req, res) => {
+    model.findAllUserInfo(res);
+  }
 };

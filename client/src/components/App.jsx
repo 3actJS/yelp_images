@@ -7,13 +7,16 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            images: []
+            images: [],
+            users: []
         }
         this.getImages = this.getImages.bind(this);
+        this.getUsers = this.getUsers.bind(this);
     }
 
     componentDidMount() {
         this.getImages();
+        this.getUsers();
     }
 
     // error handling
@@ -27,10 +30,16 @@ class App extends React.Component {
         .catch(this.handleError) 
     }
 
+    getUsers() {
+        axios.get('/users')
+        .then(res => this.setState({users: res.data}))
+        .catch(this.handleError) 
+    }   
+
     render() {
         return(
             <div>
-                <ImageContainer images={this.state.images}/>
+                <ImageContainer images={this.state.images} users={this.state.users}/>
             </div>
         );       
     }
