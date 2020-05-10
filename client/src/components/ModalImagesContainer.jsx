@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
@@ -53,6 +53,7 @@ const PhotosContainer = styled.div`
 `;
 
 const ModalImagesContainer = (props) => {
+    const [initialIndex, setInitialIndex] = useState(0);
     const imageClick = () => {
         console.log('clicked on individual image');
     }
@@ -64,9 +65,9 @@ const ModalImagesContainer = (props) => {
                     <a>See all 12 photos</a>
                 </div>
             </HeaderContainer>
-            <PhotosContainer onClick={imageClick}>
+            <PhotosContainer>
                 {props.images && props.images.map((image, index) => 
-                    <div className="individualPhoto" key={index}>
+                    <div className="individualPhoto" key={index} onClick={imageClick}>
                         <img src={image.itemImageUrl}></img>    
                     </div> 
                 )}

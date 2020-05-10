@@ -78,6 +78,22 @@ const PlaceHolderContainer = styled.div`
 
 const ModalContainer = forwardRef((props, ref) => {
     const [value, setValue] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentImage, setCurrentImage] = useState(props.clickedImage);
+
+    const goLeft = () => {
+        setCurrentIndex(
+            currentIndex > 0 ? currentIndex - 1 : 0
+        );
+        setCurrentImage(props.allImages[currentIndex]);
+    };
+  
+    const goRight = () => {
+        setCurrentIndex(
+            currentIndex < props.allImages.length ? currentIndex + 1 : currentIndex
+        );
+        setCurrentImage(props.allImages[currentIndex]);
+    };
 
     const showModal = () => {
         setValue(true);
@@ -110,7 +126,7 @@ const ModalContainer = forwardRef((props, ref) => {
                     </p>
                     <PlaceHolderContainer>
                         <div className="carouselComponent">
-                            <ImageCarousel images={props.allImages} selectedImage={props.clickedImage}/>
+                            <ImageCarousel images={props.allImages} onPrevClick={goLeft} onNextClick={goRight} selectedImage={currentImage}/>
                             <UserInfo userInfo={props.allUsers}/>   
                         </div>
                         <div className="imagesComponent">
