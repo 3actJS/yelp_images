@@ -42,15 +42,20 @@ const PhotosContainer = styled.div`
     .individualPhoto {
         display: inline-block;
         border-right: 2px solid #ffffff;
-        border-radius: 4px;
+        border-radius: 3px;
         width: 160px;
         height: 150px;
+        margin-right: 1px;
+        margin-top: 3px;
+        border: 3px solid #ffffff;
         img {
             height: 150px;
             width: 160px;
         }
         &.active {
-            border: 3px solid blue;
+            border: 3px solid #0097ec;
+            background: hsla(0,0%,100%,.5);
+            border-radius: 4px;
         }
     }
 `;

@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import styled from 'styled-components';
 import UserInfo from './UserInfo.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
@@ -84,16 +84,18 @@ const ModalContainer = forwardRef(({clickedImage, allImages, allUsers, currentIm
     const goLeft = () => {
         setCurrentIndex(
             currentIndex > 0 ? currentIndex - 1 : 0
-        );
-        setCurrentImage(allImages[currentIndex]);
+        );    
     };
   
     const goRight = () => {
         setCurrentIndex(
             currentIndex < allImages.length ? currentIndex + 1 : currentIndex
         );
-        setCurrentImage(allImages[currentIndex]);
     };
+
+    useEffect(() => {
+        setCurrentImage(allImages[currentIndex]);
+    },[currentIndex]);
 
     const showModal = () => {
         setValue(true);
