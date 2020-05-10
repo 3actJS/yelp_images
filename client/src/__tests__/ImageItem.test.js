@@ -6,7 +6,6 @@ import ImageItem from '../components/ImageItem';
 
 describe('ImageItem test suite', () => {
     it('should render the ImageItem component on screen', () => {
-        //console.log(sampleResponse);
         const props = {
             "imageId": 1,
             "imageTitle": "testImage",
