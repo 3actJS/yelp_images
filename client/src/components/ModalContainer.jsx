@@ -76,23 +76,23 @@ const PlaceHolderContainer = styled.div`
     }
 `;
 
-const ModalContainer = forwardRef((props, ref) => {
+const ModalContainer = forwardRef(({clickedImage, allImages, allUsers}, ref) => {
     const [value, setValue] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [currentImage, setCurrentImage] = useState(props.clickedImage);
+    const [currentImage, setCurrentImage] = useState(clickedImage);
 
     const goLeft = () => {
         setCurrentIndex(
             currentIndex > 0 ? currentIndex - 1 : 0
         );
-        setCurrentImage(props.allImages[currentIndex]);
+        setCurrentImage(allImages[currentIndex]);
     };
   
     const goRight = () => {
         setCurrentIndex(
-            currentIndex < props.allImages.length ? currentIndex + 1 : currentIndex
+            currentIndex < allImages.length ? currentIndex + 1 : currentIndex
         );
-        setCurrentImage(props.allImages[currentIndex]);
+        setCurrentImage(allImages[currentIndex]);
     };
 
     const showModal = () => {
@@ -102,6 +102,10 @@ const ModalContainer = forwardRef((props, ref) => {
     const hideModal = () => {
         setValue(false);
     };
+
+    const updateCarousel = () => {
+        console.log('Image is clicked');
+    }
 
     useImperativeHandle(ref, () => {
         return {
@@ -126,11 +130,11 @@ const ModalContainer = forwardRef((props, ref) => {
                     </p>
                     <PlaceHolderContainer>
                         <div className="carouselComponent">
-                            <ImageCarousel images={props.allImages} onPrevClick={goLeft} onNextClick={goRight} selectedImage={currentImage}/>
-                            <UserInfo userInfo={props.allUsers}/>   
+                            <ImageCarousel images={allImages} onPrevClick={goLeft} onNextClick={goRight} selectedImage={currentImage}/>
+                            <UserInfo userInfo={allUsers}/>   
                         </div>
                         <div className="imagesComponent">
-                            <ModalImagesContainer images={props.allImages}/>
+                            <ModalImagesContainer images={allImages} updateSelectedImage={currentImage} onImageClick={updateCarousel}/>
                         </div>
                     </PlaceHolderContainer>
                 </InnerModalContainer>

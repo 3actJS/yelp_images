@@ -52,11 +52,7 @@ const PhotosContainer = styled.div`
     }
 `;
 
-const ModalImagesContainer = (props) => {
-    const [initialIndex, setInitialIndex] = useState(0);
-    const imageClick = () => {
-        console.log('clicked on individual image');
-    }
+const ModalImagesContainer = ({images, updateSelectedImage, onImageClick}) => {
     return (
         <ImageContainer>
             <HeaderContainer>
@@ -66,8 +62,8 @@ const ModalImagesContainer = (props) => {
                 </div>
             </HeaderContainer>
             <PhotosContainer>
-                {props.images && props.images.map((image, index) => 
-                    <div className="individualPhoto" key={index} onClick={imageClick}>
+                {images && images.map((image, index) => 
+                    <div className="individualPhoto" key={index} onClick={onImageClick}>
                         <img src={image.itemImageUrl}></img>    
                     </div> 
                 )}
