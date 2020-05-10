@@ -76,9 +76,9 @@ const PlaceHolderContainer = styled.div`
     }
 `;
 
-const ModalContainer = forwardRef(({clickedImage, allImages, allUsers}, ref) => {
+const ModalContainer = forwardRef(({clickedImage, allImages, allUsers, currentImgIdx}, ref) => {
     const [value, setValue] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(currentImgIdx);
     const [currentImage, setCurrentImage] = useState(clickedImage);
 
     const goLeft = () => {
@@ -103,8 +103,9 @@ const ModalContainer = forwardRef(({clickedImage, allImages, allUsers}, ref) => 
         setValue(false);
     };
 
-    const updateCarousel = () => {
-        console.log('Image is clicked');
+    const updateCarousel = (index) => {
+        setCurrentIndex(index);
+        setCurrentImage(allImages[index]);
     }
 
     useImperativeHandle(ref, () => {
@@ -134,7 +135,7 @@ const ModalContainer = forwardRef(({clickedImage, allImages, allUsers}, ref) => 
                             <UserInfo userInfo={allUsers}/>   
                         </div>
                         <div className="imagesComponent">
-                            <ModalImagesContainer images={allImages} updateSelectedImage={currentImage} onImageClick={updateCarousel}/>
+                            <ModalImagesContainer images={allImages} currentIndex={currentIndex} onImageClick={updateCarousel}/>
                         </div>
                     </PlaceHolderContainer>
                 </InnerModalContainer>

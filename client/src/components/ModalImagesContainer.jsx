@@ -49,10 +49,16 @@ const PhotosContainer = styled.div`
             height: 150px;
             width: 160px;
         }
+        &.active {
+            border: 3px solid blue;
+        }
     }
 `;
 
-const ModalImagesContainer = ({images, updateSelectedImage, onImageClick}) => {
+const ModalImagesContainer = ({images, currentIndex, onImageClick}) => {
+    const handleImageClick = (index) => (event) => {
+        onImageClick && onImageClick(index);
+    }
     return (
         <ImageContainer>
             <HeaderContainer>
@@ -63,7 +69,7 @@ const ModalImagesContainer = ({images, updateSelectedImage, onImageClick}) => {
             </HeaderContainer>
             <PhotosContainer>
                 {images && images.map((image, index) => 
-                    <div className="individualPhoto" key={index} onClick={onImageClick}>
+                    <div className={`individualPhoto ${currentIndex === index ? 'active': ''}`} key={index} onClick={handleImageClick(index)}>
                         <img src={image.itemImageUrl}></img>    
                     </div> 
                 )}
