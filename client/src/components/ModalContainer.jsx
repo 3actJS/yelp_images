@@ -25,7 +25,7 @@ const MainContainer=styled.div`
 
 const InnerModalContainer = styled.div`
     position: relative;
-    height: 90%;
+    height: 93%;
     background: #333;
     background: rgba(0,0,0,.7);
     -webkit-user-select: text;
@@ -134,7 +134,7 @@ const ModalContainer = forwardRef(({clickedImage, allImages, allUsers, currentIm
                     <PlaceHolderContainer>
                         <div className="carouselComponent">
                             <ImageCarousel images={allImages} onPrevClick={goLeft} onNextClick={goRight} selectedImage={currentImage}/>
-                            <UserInfo userInfo={allUsers}/>   
+                            {/* <UserInfo userInfo={allUsers}/>  */}  
                         </div>
                         <div className="imagesComponent">
                             <ModalImagesContainer images={allImages} currentIndex={currentIndex} onImageClick={updateCarousel}/>

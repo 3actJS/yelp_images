@@ -54,8 +54,11 @@ const PhotosContainer = styled.div`
         }
         &.active {
             border: 3px solid #0097ec;
-            background: hsla(0,0%,100%,.5);
             border-radius: 4px;
+            img {
+                -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+                filter: blur(1px);
+            }
         }
     }
 `;
