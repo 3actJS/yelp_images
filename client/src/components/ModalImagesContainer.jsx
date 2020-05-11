@@ -43,14 +43,14 @@ const PhotosContainer = styled.div`
         display: inline-block;
         border-right: 2px solid #ffffff;
         border-radius: 3px;
-        width: 160px;
+        width: 150px;
         height: 150px;
         margin-right: 1px;
         margin-top: 3px;
         border: 3px solid #ffffff;
         img {
             height: 150px;
-            width: 160px;
+            width: 150px;
         }
         &.active {
             border: 3px solid #0097ec;

@@ -41,7 +41,6 @@ const NextSpan = styled.span`
 `;
 
 const ImageCarousel = ({images, selectedImage, onPrevClick, onNextClick}) => {
-    
     return (
         <div>
            <BackSpan onClick={onPrevClick}>
