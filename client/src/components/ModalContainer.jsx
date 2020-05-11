@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import styled from 'styled-components';
 import UserInfo from './UserInfo.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
@@ -25,7 +25,7 @@ const MainContainer=styled.div`
 
 const InnerModalContainer = styled.div`
     position: relative;
-    height: 90%;
+    height: 93%;
     background: #333;
     background: rgba(0,0,0,.7);
     -webkit-user-select: text;
@@ -76,8 +76,35 @@ const PlaceHolderContainer = styled.div`
     }
 `;
 
-const ModalContainer = forwardRef((props, ref) => {
+const ModalContainer = forwardRef(({clickedImage, allImages, allUsers, currentImgIdx}, ref) => {
+    
     const [value, setValue] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(currentImgIdx);
+    const [currentImage, setCurrentImage] = useState(clickedImage);
+
+    useEffect(() => {
+        setCurrentImage(clickedImage);
+    },[clickedImage]);
+
+    useEffect(() => {
+        setCurrentIndex(currentImage.imageId - 1);
+    },[currentImage]);
+
+    const goLeft = () => {
+        setCurrentIndex(
+            currentIndex > 0 ? currentIndex - 1 : 0
+        );    
+    };
+  
+    const goRight = () => {
+        setCurrentIndex(
+            currentIndex < allImages.length ? currentIndex + 1 : currentIndex
+        );
+    };
+
+    useEffect(() => {
+        setCurrentImage(allImages[currentIndex]);
+    },[currentIndex]);
 
     const showModal = () => {
         setValue(true);
@@ -86,6 +113,11 @@ const ModalContainer = forwardRef((props, ref) => {
     const hideModal = () => {
         setValue(false);
     };
+
+    const updateCarousel = (index) => {
+        setCurrentIndex(index);
+        setCurrentImage(allImages[index]);
+    }
 
     useImperativeHandle(ref, () => {
         return {
@@ -110,11 +142,11 @@ const ModalContainer = forwardRef((props, ref) => {
                     </p>
                     <PlaceHolderContainer>
                         <div className="carouselComponent">
-                            <ImageCarousel images={props.allImages} selectedImage={props.clickedImage}/>
-                            <UserInfo userInfo={props.allUsers}/>   
+                            <ImageCarousel images={allImages} onPrevClick={goLeft} onNextClick={goRight} selectedImage={currentImage}/>
+                            
                         </div>
                         <div className="imagesComponent">
-                            <ModalImagesContainer images={props.allImages}/>
+                            <ModalImagesContainer images={allImages} currentIndex={currentIndex} onImageClick={updateCarousel}/>
                         </div>
                     </PlaceHolderContainer>
                 </InnerModalContainer>

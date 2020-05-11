@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
@@ -42,19 +42,30 @@ const PhotosContainer = styled.div`
     .individualPhoto {
         display: inline-block;
         border-right: 2px solid #ffffff;
-        border-radius: 4px;
-        width: 160px;
+        border-radius: 3px;
+        width: 150px;
         height: 150px;
+        margin-right: 1px;
+        margin-top: 3px;
+        border: 3px solid #ffffff;
         img {
             height: 150px;
-            width: 160px;
+            width: 150px;
+        }
+        &.active {
+            border: 3px solid #0097ec;
+            border-radius: 4px;
+            img {
+                -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+                filter: blur(1px);
+            }
         }
     }
 `;
 
-const ModalImagesContainer = (props) => {
-    const imageClick = () => {
-        console.log('clicked on individual image');
+const ModalImagesContainer = ({images, currentIndex, onImageClick}) => {
+    const handleImageClick = (index) => (event) => {
+        onImageClick && onImageClick(index);
     }
     return (
         <ImageContainer>
@@ -64,9 +75,9 @@ const ModalImagesContainer = (props) => {
                     <a>See all 12 photos</a>
                 </div>
             </HeaderContainer>
-            <PhotosContainer onClick={imageClick}>
-                {props.images && props.images.map((image, index) => 
-                    <div className="individualPhoto" key={index}>
+            <PhotosContainer>
+                {images && images.map((image, index) => 
+                    <div className={`individualPhoto ${currentIndex === index ? 'active': ''}`} key={index} onClick={handleImageClick(index)}>
                         <img src={image.itemImageUrl}></img>    
                     </div> 
                 )}
