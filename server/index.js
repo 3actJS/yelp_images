@@ -12,6 +12,10 @@ let app = express();
 
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(parser());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 app.get('/images', getImages);
 
