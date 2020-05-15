@@ -10,3 +10,4 @@ var connection = mysql.createConnection({
 connection.connect(() => console.log('connected to the database!'));
 
 module.exports = connection;
+
