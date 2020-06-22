@@ -1,17 +1,23 @@
-# Project Name
+Setup
+-----
 
-Image Carousel Component
+Full Stack Image Carousel Component
 
-## Start the Application
+Install all the dependencies
+-----
+run ```npm install```
 
-> To add all the dependencies
-- npm install
+Seed Data
+---------
+run ```npm run seed```
 
-> To start webpack
-- npm run react-dev
+Start server
+------------
+run ```npm run server-dev```
 
-> To start the nodemon server
-- npm run server-dev
+Start webpack
+------------
+run ```npm run react-dev```
 
 
 
