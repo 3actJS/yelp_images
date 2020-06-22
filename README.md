@@ -1,23 +1,19 @@
 Setup
 -----
 
-Full Stack Image Carousel Component
+Full Stack Document Management Application
 
 Install all the dependencies
 -----
 run ```npm install```
 
-Seed Data
----------
-run ```npm run seed```
-
 Start server
 ------------
-run ```npm run server-dev```
+run ```npm run react-server```
 
 Start webpack
 ------------
-run ```npm run react-dev```
+run ```npm run react-client```
 
 
 
