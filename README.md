@@ -1,13 +1,6 @@
 # Project Name
 
-> Yelp Images Project
-
-## Related Projects
-
-- https://github.com/3actJS/yelp_images
-- https://github.com/3actJS/yelp_reservations
-- https://github.com/3actJS/yelp_business-reviews
-- https://github.com/3actJS/yelp_popular-dishes
+Image Carousel Component
 
 ## Table of Contents
 
@@ -17,28 +10,14 @@
 
 ## Start the Application
 
+> To add all the dependencies
 - npm install
-- Server, npm run server-dev
 
-## Usage
+> To start webpack
+npm run react-dev
 
-> Some usage instructions
+> To start the nodemon server
+- npm run server-dev
 
-## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
 
